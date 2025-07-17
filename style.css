@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'ClockIcons';
+  src: url('./fonts/ClockIcons.woff2') format('woff2'),
+}
+:root {
+    --display-text-color: #fff;
+    --bg-color: #000;
+    --text-color: #fff;
+    --card-bg: #111;
+    --border-color: #444;
+    --lap-text-color: #fff;
+    --fastest-bg: #28a74555;
+    --slowest-bg: #dc354555;
+}
+
+body.light {
+    --display-text-color: #000;
+    --bg-color: #fff;
+    --text-color: #000;
+    --card-bg: #f8f8f8;
+    --border-color: #ccc;
+    --lap-text-color: #000;
+    --fastest-bg: #c1f5c1;
+    --slowest-bg: #f5c1c1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* CLOCK DISPLAY */
+.display {
+    font-family: 'clockicons';
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--display-text-color);
+    background-color: var(--card-bg);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px #00ffcc33;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s, opacity 0.2s ease;
+}
+
+.buttons {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.start {
+    background-color: #28a745;
+    color: white;
+}
+
+.lap {
+    background-color: #007bff;
+    color: white;
+}
+
+.reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.laps-wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.laps {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--lap-text-color);
+    background-color: var(--bg-color);
+}
+
+.laps th,
+.laps td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--lap-text-color);
+}
+
+.laps thead {
+    background-color: var(--card-bg);
+    position: sticky;
+    top: 0;
+}
+
+.fastest {
+    background-color: var(--fastest-bg);
+}
+
+.slowest {
+    background-color: var(--slowest-bg);
+}
+
+.lap-summary {
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.lap-summary p {
+    transition: opacity 0.3s ease;
+}
+
+body,
+.display,
+.laps,
+.laps th,
+.laps td,
+.theme-toggle,
+.lap-summary p {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}

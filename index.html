@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dark">
+    <div class="container">
+        <button id="theme-toggle" class="theme-toggle">☀️ Light Mode</button>
+        <h1><i class="fa-solid fa-stopwatch" style="margin-right: 10px;"></i>Stopwatch</h1>
+        <div class="display">00:00:00.00</div>
+        <div class="lap-summary">
+            <p id="fastest">Fastest: -</p>
+            <p id="slowest">Slowest: -</p>
+        </div>
+        <div class="buttons">
+            <button class="start">Start</button>
+            <button class="lap">Lap</button>
+            <button class="reset">Reset</button>
+        </div>
+        <div class="laps-wrapper">
+            <table class="laps">
+                <thead>
+                    <tr>
+                        <th>Lap</th>
+                        <th>Time</th>
+                        <th>Total Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
