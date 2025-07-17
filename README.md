@@ -2,7 +2,7 @@
 
 A sleek and functional **Stopwatch Web App** built as **Task 2** for the **Web Development Internship at Prodigy InfoTech**.
 
-🔗 [Live Demo](https://gauri0304.github.io/PRODIGY_WD_02/)
+🔗 [Live Demo](https://sxoham.github.io/PRODIGY_WD_02/)
 
 ---
 
